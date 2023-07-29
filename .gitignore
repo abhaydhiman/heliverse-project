@@ -1,0 +1,5 @@
+node_modules/
+npm-debug.log
+.env
+frontend/build/
+heliverse_mock_data.json
