@@ -2,7 +2,6 @@ const express = require('express');
 const cors = require('cors');
 require('dotenv').config();
 const connectDB = require('./db');
-const itemsRouter = require('./routes/items');
 const userRoutes = require('./routes/userRoutes');
 
 const app = express();
@@ -22,7 +21,6 @@ connectDB();
 app.use(express.json());
 
 // Routes
-app.use('/api/items', itemsRouter);
 app.use(userRoutes);
 
 app.listen(PORT, () => {
