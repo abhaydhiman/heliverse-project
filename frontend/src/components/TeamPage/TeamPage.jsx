@@ -29,7 +29,7 @@ const TeamPage = () => {
 
     const fetchUserInfo = async (userId) => {
         try {
-            const response = await fetch(`http://localhost:5000/api/users/${userId}`);
+            const response = await fetch(`https://heliverse-api.onrender.com/api/users/${userId}`);
             const data = await response.json();
             return data;
         } catch (error) {

@@ -147,9 +147,9 @@ const UserList = () => {
                                 <h3>Selected Team Members:</h3>
                                 {renderSelectedTeamMembers()}
                                 <div className="text-center">
-                                    <button className="create-team-button" onClick={handleCreateTeam}>
+                                    <Button className="create-team-button" onClick={handleCreateTeam}>
                                         Create Team
-                                    </button>
+                                    </Button>
                                 </div>
                             </>
                         ) : (
