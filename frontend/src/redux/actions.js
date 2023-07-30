@@ -23,7 +23,7 @@ export const fetchUsers = (queryParams) => {
     return async (dispatch) => {
         try {
             dispatch(fetchUsersRequest());
-            const response = await axios.get(`{backendBaseUrl}/api/users`, { params: queryParams });
+            const response = await axios.get(`${backendBaseUrl}/api/users`, { params: queryParams });
             const { users, totalUsers, currentPage, totalPages } = response.data;
             dispatch(fetchUsersSuccess(users, totalUsers, currentPage, totalPages));
         } catch (error) {

@@ -29,7 +29,7 @@ export const createTeam = (selectedUserIds) => {
     return (dispatch) => {
         dispatch(createTeamRequest());
         axios
-            .post(`{backendBaseUrl}/api/team`, { selectedUsers: selectedUserIds })
+            .post(`${backendBaseUrl}/api/team`, { selectedUsers: selectedUserIds })
             .then((response) => {
                 const team = response.data;
                 dispatch(createTeamSuccess(team));

@@ -7,7 +7,7 @@ export const fetchDomainOptions = () => async (dispatch) => {
     try {
         dispatch({ type: FETCH_DOMAIN_OPTIONS_REQUEST });
 
-        const response = await fetch(`{backendBaseUrl}/api/domains`); 
+        const response = await fetch(`${backendBaseUrl}/api/domains`); 
         const data = await response.json();
 
         dispatch({
