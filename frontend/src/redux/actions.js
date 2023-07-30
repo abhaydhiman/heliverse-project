@@ -3,6 +3,7 @@ import axios from 'axios';
 export const FETCH_USERS_REQUEST = 'FETCH_USERS_REQUEST';
 export const FETCH_USERS_SUCCESS = 'FETCH_USERS_SUCCESS';
 export const FETCH_USERS_FAILURE = 'FETCH_USERS_FAILURE';
+const backendBaseUrl = process.env.REACT_APP_BACKEND_URL;
 
 export const fetchUsersRequest = () => ({
     type: FETCH_USERS_REQUEST,
@@ -22,7 +23,7 @@ export const fetchUsers = (queryParams) => {
     return async (dispatch) => {
         try {
             dispatch(fetchUsersRequest());
-            const response = await axios.get('http://localhost:5000/api/users', { params: queryParams });
+            const response = await axios.get(`{backendBaseUrl}/api/users`, { params: queryParams });
             const { users, totalUsers, currentPage, totalPages } = response.data;
             dispatch(fetchUsersSuccess(users, totalUsers, currentPage, totalPages));
         } catch (error) {
