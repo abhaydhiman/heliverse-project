@@ -3,7 +3,7 @@ import axios from 'axios';
 export const CREATE_TEAM_REQUEST = 'CREATE_TEAM_REQUEST';
 export const CREATE_TEAM_SUCCESS = 'CREATE_TEAM_SUCCESS';
 export const CREATE_TEAM_FAILURE = 'CREATE_TEAM_FAILURE';
-const backendBaseUrl = process.env.REACT_APP_BACKEND_URL;
+const backendBaseUrl = process.env.REACT_APP_BACKEND_URL || "https://heliverse-api.onrender.com";
 
 const createTeamRequest = () => {
     return {

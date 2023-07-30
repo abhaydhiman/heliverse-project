@@ -3,7 +3,7 @@ import axios from 'axios';
 export const FETCH_USERS_REQUEST = 'FETCH_USERS_REQUEST';
 export const FETCH_USERS_SUCCESS = 'FETCH_USERS_SUCCESS';
 export const FETCH_USERS_FAILURE = 'FETCH_USERS_FAILURE';
-const backendBaseUrl = process.env.REACT_APP_BACKEND_URL;
+const backendBaseUrl = process.env.REACT_APP_BACKEND_URL || "https://heliverse-api.onrender.com";
 
 export const fetchUsersRequest = () => ({
     type: FETCH_USERS_REQUEST,
