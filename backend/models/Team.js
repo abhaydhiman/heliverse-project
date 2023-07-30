@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const teamSchema = new mongoose.Schema({
     teamId: { type: String, required: true},
-    members: [{ type: mongoose.Schema.Types.ObjectId, ref: 'User' }],
+    members: [{ type: Number }],
 });
 
 const Team = mongoose.model('Team', teamSchema);

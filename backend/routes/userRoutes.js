@@ -152,7 +152,7 @@ router.post('/api/team', async (req, res) => {
         let allAvailable = true;
 
         for (const userId of selectedUsers) {
-            const user = await User.findOne({ _id: userId });
+            const user = await User.findOne({ id: userId });
 
             if (!user) {
                 return res.status(404).json({ message: `User with ID ${userId} not found` });

@@ -128,8 +128,7 @@ const UserList = () => {
 
     const handleCreateTeam = () => {
         try {
-            const selectedUserIds = selectedTeamMembers.map((user) => user._id);
-
+            const selectedUserIds = selectedTeamMembers.map((user) => user.id);
             dispatch(createTeam(selectedUserIds));
             setSelectedTeamMembers([]);
             setShowModal(true);
